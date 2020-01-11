@@ -22,7 +22,7 @@ $(document).ready(() => {
   let game = newBattle();
 
   $(".pokemon").click(() => {
-    game.currentValue += game.crystalValues[this.value];
+    game.currentValue += isNumeric(game.crystalValues[this.value]);
     $("#berriesUsed").text(game.currentValue);
     if (game.currentValue === game.target) {
       wins++;
