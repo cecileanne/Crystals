@@ -8,44 +8,46 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <header>Pokemon Addition</header>
+    <h1>Gym Defense Training</h1>
     <h5>
       Mareep, Slakoth and Snorlax have backpacks that hold a certain number of
-      berries that the professor fills to the brim once they're empty. Click on
-      them to collect their pouches (and find out how many berries they're
+      berries that Professor Willow fills to the brim once they're empty. Click
+      on them to collect their pouches (and find out how many berries they're
       holding) - because you need to have a certain number of berries in order
       defend your gym successfully. Too few and you'll lose to much power. Too
       many and your opponents might steal the excess! You need to be right on
       target to win.
     </h5>
-    <br />
     <h5>
       You will face another gym after you win or lose, and your pokemon friends
       will get different pouches for your next battle.
     </h5>
 
     <div>
-      <div id="target"></div>
-      <div id="berriesUsed"></div>
+      <h3>
+        Berries Needed:
+        <div id="target"></div>
+      </h3>
+      <h3>
+        Berries Used:
+        <div id="berriesUsed"></div>
+      </h3>
     </div>
     <hr />
 
-    <input
-      type="image"
+    <img
       class="pokemon"
       src="/assets/images/mareep.jpg"
       alt="mareep"
       value="0"
     />
-    <input
-      type="image"
+    <img
       class="pokemon"
       src="/assets/images/slakoth.jpg"
       alt="slakoth"
       value="0"
     />
-    <input
-      type="image"
+    <img
       class="pokemon"
       src="/assets/images/snorlax.jpg"
       alt="snorlax"
@@ -54,8 +56,14 @@
 
     <hr />
     <div>
-      <h5><div id="winCount"></div></h5>
-      <h5><div id="lossCount"></div></h5>
+      <h5>
+        Gyms Successfully Defended:
+        <div id="winCount"></div>
+      </h5>
+      <h5>
+        Gyms Lost:
+        <div id="lossCount"></div>
+      </h5>
     </div>
     <script src="index.js"></script>
   </body>

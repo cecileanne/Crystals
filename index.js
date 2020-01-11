@@ -5,23 +5,23 @@ function newBattle() {
   gameState = {
     target: Math.floor(Math.random() * 50) + 25,
     crystalValues: [
-      Math.ceil(Math.random() * 15),
-      Math.ceil(Math.random() * 15),
-      Math.ceil(Math.random() * 15)
+      Math.floor(Math.random() * 15 + 1),
+      Math.floor(Math.random() * 15 + 1),
+      Math.floor(Math.random() * 15 + 1)
     ],
     currentValue: 0
   };
-  $("#target").text("Berries Needed: " + gameState.target);
-  $("#berriesUsed").text("Berries Used: " + gameState.currentValue);
-  $("#winCount").text("Gyms successfully defended: " + wins);
-  $("#lossCount").text("Gyms lost: " + losses);
+  $("#target").text(gameState.target);
+  $("#berriesUsed").text(gameState.currentValue);
+  $("#winCount").text(wins);
+  $("#lossCount").text(losses);
   return gameState;
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   let game = newBattle();
 
-  $(".pokemon").click(function() {
+  $(".pokemon").onClick(() => {
     game.currentValue += game.crystalValues[this.value];
     $("#berriesUsed").text(game.currentValue);
     if (game.currentValue === game.target) {
@@ -29,7 +29,7 @@ $(document).ready(function() {
       game = newBattle();
     } else if (game.currentValue >= game.target) {
       losses++;
-      game = newGameBattle();
+      game = newBattle();
     }
   });
 });
