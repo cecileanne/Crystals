@@ -21,14 +21,16 @@ function newBattle() {
 $(document).ready(() => {
   let game = newBattle();
 
-  $(".pokemon").onClick(() => {
+  $(".pokemon").click(() => {
     game.currentValue += game.crystalValues[this.value];
     $("#berriesUsed").text(game.currentValue);
     if (game.currentValue === game.target) {
       wins++;
+      alert("Win!!");
       game = newBattle();
     } else if (game.currentValue >= game.target) {
       losses++;
+      alert("You Lose :(");
       game = newBattle();
     }
   });

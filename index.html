@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Addition Game</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -26,11 +31,11 @@
     <div>
       <h3>
         Berries Needed:
-        <div id="target"></div>
+        <span id="target"></span>
       </h3>
       <h3>
         Berries Used:
-        <div id="berriesUsed"></div>
+        <span id="berriesUsed"></span>
       </h3>
     </div>
     <hr />
@@ -39,21 +44,21 @@
       <input
         type="image"
         class="pokemon"
-        src="/assets/images/mareep.jpg"
+        src="./assets/images/mareep.jpg"
         alt="mareep"
         value="0"
       />
       <input
         type="image"
         class="pokemon"
-        src="/assets/images/slakoth.jpg"
+        src="./assets/images/slakoth.jpg"
         alt="slakoth"
         value="0"
       />
       <input
         type="image"
         class="pokemon"
-        src="/assets/images/snorlax.jpg"
+        src="./assets/images/snorlax.jpg"
         alt="snorlax"
         value="0"
       />
@@ -63,11 +68,11 @@
     <div>
       <h5>
         Gyms Successfully Defended:
-        <div id="winCount"></div>
+        <span id="winCount"></span>
       </h5>
       <h5>
         Gyms Lost:
-        <div id="lossCount"></div>
+        <span id="lossCount"></span>
       </h5>
     </div>
     <script src="index.js"></script>
