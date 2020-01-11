@@ -21,7 +21,7 @@ function newBattle() {
 $(document).ready(function() {
   let game = newBattle();
 
-  $(".crystalSprite").click(function() {
+  $(".pokemon").click(function() {
     game.currentValue += game.crystalValues[this.value];
     $("#berriesUsed").text(game.currentValue);
     if (game.currentValue === game.target) {
